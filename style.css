@@ -72,7 +72,7 @@ a {
   color: var(--text-black);
 }
 
-a {
+a:hover {
   cursor: pointer;
 }
 
