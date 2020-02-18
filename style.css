@@ -1,0 +1,323 @@
+:root {
+  --link-color: #188fff;
+  --tab-color: #8300ff;
+  --tab-underline-color: #dedede;
+  --red: #fa1229;
+  --label-color: #f90;
+  --text-black: #26282a;
+  --text-darkgray: #464e56;
+}
+
+/******** reset ********/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+a,
+figure,
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/******** initial setting ********/
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  color: var(--text-black);
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  color: var(--text-darkgray);
+}
+
+h2 {
+  font-size: 19px;
+}
+
+h3 {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 13px;
+}
+
+/******** nav ********/
+nav {
+  height: 47.5px;
+  box-shadow: 0px 1px 10px #ccc;
+}
+
+.nav-link img {
+  width: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+
+.nav-logo {
+  width: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/******** info ********/
+
+.info-container {
+  padding-top: 5%;
+  padding-bottom: 3%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.info-image {
+  -webkit-box-flex: 1;
+  flex: 1 1 45%;
+}
+
+.info-image-text {
+  font-size: 13px;
+}
+
+.info-content {
+  -webkit-box-flex: 1;
+  flex: 1 1 55%;
+  padding-left: 10px;
+}
+
+.info-content-subtitle {
+  padding-bottom: 13px;
+}
+
+.info-content .info-content-link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+.info-content-icons-wrapper {
+  text-align: right;
+  padding: 20px 0;
+}
+
+.info-content-icon {
+  width: 32px;
+  cursor: pointer;
+}
+
+/******** tabs ********/
+
+.nav-tab-active > a {
+  color: var(--tab-color);
+}
+
+.nav-tab-link span {
+  font-size: 13px;
+}
+
+.nav-tabs {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--tab-underline-color);
+}
+
+.nav-tabs a {
+  padding: 10px;
+}
+
+.nav-tab-active {
+  color: var(--tab-color);
+  border-bottom: 4px solid var(--tab-color);
+}
+
+.nav-tab-link span {
+  font-size: 13px;
+}
+
+/******** portfolio ********/
+
+.portfolio-link {
+  display: inline-block;
+  width: 96px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 16px;
+  border: 1px solid #b9bdc5;
+  font-size: 16px;
+  margin: 16px 3px;
+  color: var(--text-black);
+}
+
+.portfolio-link.active {
+  background-color: var(--tab-color);
+  color: #fff;
+  border: none;
+}
+
+.portfolio .portfolio-link:first-child {
+  margin-left: 0px;
+}
+
+.portfolio-cards {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.portfolio-card {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.portfolio-card-image {
+  -webkit-box-flex: 1;
+  flex: 1 1 33.33%;
+}
+
+.portfolio-card-content {
+  -webkit-box-flex: 1;
+  flex: 1 1 66.66%;
+  padding-left: 10px;
+}
+
+.portfolio-card-content h2 {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.portfolio-card-content h2:first-child {
+  display: inline-block;
+}
+
+.portfolio-card-content .label {
+  background-color: var(--label-color);
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.portfolio-card-content p {
+  display: inline-block;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.portfolio-card-content span {
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+.portfolio-card-content-rank span {
+  color: var(--red);
+}
+
+.rating {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 3px;
+  font-size: 13px;
+  font-family: FontAwesome;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+.rating > .on,
+.rating > .on ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #fadc00;
+}
+
+.nav-link-footer img {
+  width: 20px;
+  display: block;
+  margin: 0 auto;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
